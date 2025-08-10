@@ -28,14 +28,14 @@ systemd-friendly (saves DB on changes and at shutdown)
 sudo apt update && sudo apt upgrade -y
 sudo apt install python3-pip python3-venv ffmpeg i2c-tools -y
 sudo raspi-config    # enable I2C
-// create virtualenv and install python deps
+##### create virtualenv and install python deps
 python3 -m venv ~/anime-env
 source ~/anime-env/bin/activate
 pip install flask requests smbus2 python-dotenv
-// create dirs
+##### create dirs
 sudo mkdir -p /media/anime
 mkdir -p /home/pi/anime_static
-// place a fallback poster at /home/pi/anime_static/fallback.png
+##### place a fallback poster at /home/pi/anime_static/fallback.png
 
 
 Make sure Kodi is configured to allow remote control via HTTP (Settings → Services → Control → Allow remote control via HTTP). Port 8080 default.
